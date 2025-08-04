@@ -40,7 +40,7 @@ The model successfully learned to fill polygons with the specified colors, as se
 
 | Input Polygon | Target Color | Model Output |
 |---------------|--------------|--------------|
-| ![gray](square.png) | `"magenta"` | ![output](output.png) |
+| ![gray](square.png) | `"magenta"` | ![output](Output.png) |
 
 ### Failure Modes
 The primary potential failure mode identified is the model's possible struggle with imperfect or noisy input images, which could lead to a less precise distinction between the polygon and the background.
