@@ -23,10 +23,10 @@ To incorporate the color information, the model's input is a 4-channel tensor. T
 | :--- | :--- | :--- |
 | **Learning Rate** | A standard starting point for the Adam optimizer. | `1e-3` |
 | **Optimizer** | The Adam optimizer is a robust choice for a wide range of deep learning tasks. | `torch.optim.Adam` |
-| **Loss Function** | Mean Squared Error (MSE) is an appropriate choice for this image regression task, as the model predicts pixel values. | `nn.MSELoss()` |
-| **Epochs** | A sufficient number of epochs to allow the model to converge without overfitting. | `10` |
+| **Loss Function** | Mean Absolute Error (L1 Loss) is an appropriate choice for this image regression task, as the model predicts pixel values. | `nn.L1Loss()` |
+| **Epochs** | A sufficient number of epochs to allow the model to converge without overfitting. | `200` |
 | **Batch Size** | A standard batch size that balances memory usage and training stability. | `16` |
-| **Image Resolution** | A low resolution was chosen to speed up training and inference, which is sufficient for simple polygon shapes. | `128x128` |
+| **Image Resolution** | A low resolution was chosen to speed up training and inference, which is sufficient for simple polygon shapes. | `256x256` |
 
 ## 📊 Training Dynamics
 
@@ -40,7 +40,7 @@ The model successfully learned to fill polygons with the specified colors, as se
 
 | Input Polygon | Target Color | Model Output |
 |---------------|--------------|--------------|
-| ![gray](inputs/triangle.png) | `"blue"` | ![output](outputs/triangle_blue.png) |
+| ![gray](triangle.png) | `"magenta"` | ![output](output.png) |
 
 ### Failure Modes
 The primary potential failure mode identified is the model's possible struggle with imperfect or noisy input images, which could lead to a less precise distinction between the polygon and the background.
