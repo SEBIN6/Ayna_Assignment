@@ -40,7 +40,7 @@ The model successfully learned to fill polygons with the specified colors, as se
 
 | Input Polygon | Target Color | Model Output |
 |---------------|--------------|--------------|
-| ![gray](triangle.png) | `"magenta"` | ![output](output.png) |
+| ![gray](square.png) | `"magenta"` | ![output](output.png) |
 
 ### Failure Modes
 The primary potential failure mode identified is the model's possible struggle with imperfect or noisy input images, which could lead to a less precise distinction between the polygon and the background.
@@ -61,5 +61,7 @@ The primary potential failure mode identified is the model's possible struggle w
 * `inference.ipynb`
 * `unet_model.pth`
 * `README.md` (this file)
-* [cite_start][wandb Project Link](https://wandb.ai/sebin2308-mbccet/ayna-polygon-coloring) [cite: 1]
-* [cite_start][wandb Run Link](https://wandb.ai/sebin2308-mbccet/ayna-polygon-coloring/runs/lszf1isu) [cite: 2]
+* [wandb Project Link](https://wandb.ai/sebin2308-mbccet/ayna-polygon-coloring)
+* [wandb Run Link](https://wandb.ai/sebin2308-mbccet/ayna-polygon-coloring/runs/lszf1isu)
+* square.png (input)
+* output.png
